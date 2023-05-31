@@ -3,27 +3,23 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
 const products = [
-  { name: 'Estudios', description: 'Get a better understanding of your traffic', href: '/catalogo', icon: ChartPieIcon },
-  { name: 'Frecuentes', description: 'Speak directly to your customers', href: '/catalogo?filter=frecuentes', icon: CursorArrowRaysIcon },
-  { name: 'Análisis clínicos', description: 'Your customers’ data will be safe and secure', href: '/catalogo?filter=analisis', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '/', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '/', icon: ArrowPathIcon },
+  { name: 'Estudios', description: 'Catálogo de todos los estudios que ofrecemos', href: '/catalogo', icon: ChartPieIcon },
+  { name: 'Frecuentes', description: 'Estudios realizados con mayor frecuencia en nuestra clínica', href: '/catalogo?filter=frecuentes', icon: CursorArrowRaysIcon },
+  { name: 'Análisis clínicos', description: 'Pruebas de laboratorio y estudios especializados', href: '/catalogo?filter=analisis', icon: FingerPrintIcon },
 ]
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Agendar Cita', href: '/agendar-cita', icon: PlayCircleIcon },
+  { name: 'Contactar', href: '/contacto', icon: PhoneIcon },
 ]
 
 function classNames(...classes) {
@@ -56,7 +52,7 @@ export function Header() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              Estudios
+              Servicos
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
 
@@ -71,9 +67,9 @@ export function Header() {
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
-                  {products.map((item) => (
+                  {products.map((item, i) => (
                     <div
-                      key={item.name}
+                      key={i}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
@@ -129,7 +125,7 @@ export function Header() {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="/img/logo.jpeg"
                 alt=""
               />
             </Link>
@@ -149,7 +145,7 @@ export function Header() {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Product
+                        Servicios
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                           aria-hidden="true"
@@ -171,30 +167,30 @@ export function Header() {
                   )}
                 </Disclosure>
                 <Link
-                  href="#"
+                  href="/promociones"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Features
+                  Promociones
                 </Link>
                 <Link
-                  href="#"
+                  href="/resultados"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Marketplace
+                  Resultados
                 </Link>
                 <Link
-                  href="#"
+                  href="/conocenos"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Company
+                  Conócenos
                 </Link>
               </div>
               <div className="py-6">
                 <Link
-                  href="#"
+                  href="/auth/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  Acceder
                 </Link>
               </div>
             </div>
