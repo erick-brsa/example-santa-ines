@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function CatalogueCard({ study }) {
 	return (
-		<div className='bg-white shadow-[0px_2px_8px_0pxrgba(99,99,99,0.2)] rounded-xl overflow-hidden border border-gray-200 transition-shadow'>
+		<div className='bg-white shadow-[0px_2px_8px_0px_rgba(99,99,99,0.2)] rounded-xl overflow-hidden border border-gray-200 transition-shadow'>
 			<Link
 				href={`/`}
 				className="grid grid-rows-[auto_1fr_auto] h-full"

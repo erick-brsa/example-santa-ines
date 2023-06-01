@@ -12,8 +12,6 @@ async function getData() {
 export default async function CataloguePage({ searchParams }) {
 	const catalogue = await getData();
 
-	const { page = '0' } = searchParams;
-console.log(catalogue.length)
 	return (
 		<main className="py-5">
 			<div className="">
