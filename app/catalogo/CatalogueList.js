@@ -12,7 +12,7 @@ export function CatalogueList({ catalogue }) {
 
 	return (
 		<div className="flex w-full max-w-6xl 2xl:max-w-7xl mx-auto">
-			<div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 px-5 py-5">
+			<div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-[2.5rem] px-5 py-5">
 				{catalogue.slice(skip, end).map((study) => (
 					<CatalogueCard 
 						key={study.id}
