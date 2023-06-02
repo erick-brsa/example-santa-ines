@@ -5,7 +5,7 @@ export default function HomePage() {
 		<main className="w-full py-10 px-5">
 			<div className="flex flex-col items-center gap-10 max-w-5xl bg-white shadow-[0px_2px_8px_0px_rgba(99,99,99,0.2)] rounded-xl mx-auto py-14 px-10">
 				<div className='flex flex-col gap-5'>
-					<h1 className="flex flex-col text-6xl font-extrabold text-gray-600 gap-4 items-center">
+					<h1 className="flex flex-col text-6xl font-extrabold text-gray-700 gap-4 items-center">
 						<span>Laboratorio Clínico</span>
 						<span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-violet-500">
 							Santa Inés

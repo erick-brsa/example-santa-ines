@@ -13,7 +13,7 @@ export function CatalogueCard({ study }) {
 					</h2>
 				</div>
 
-				<div className="p-4 uppercase text-gray-400">
+				<div className="p-4 uppercase text-gray-500">
 					<p className="text-md">
 						Condiciones: {study.conditions}
 					</p>

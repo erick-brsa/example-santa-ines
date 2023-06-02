@@ -27,6 +27,7 @@ function classNames(...classes) {
 }
 
 export function Header() {
+  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -112,7 +113,7 @@ export function Header() {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/auth/login" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href="/login" className="text-sm font-semibold leading-6 text-gray-900">
             Ingresar <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
@@ -187,7 +188,7 @@ export function Header() {
               </div>
               <div className="py-6">
                 <Link
-                  href="/auth/login"
+                  href="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Acceder

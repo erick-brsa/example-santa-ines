@@ -1,12 +1,12 @@
-import './globals.css'
+import '../globals.css'
 import { Inter } from 'next/font/google'
-import { Header, Footer } from './components/ui'
+import { Header, Footer } from '../components/ui'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Laboratorio Clínico Sanra Inés',
-  description: 'Sitio web de Laboratorio Clínico Sanra Inés',
+  title: 'Laboratorio Clínico Santa Inés',
+  description: 'Sitio web de Laboratorio Clínico Santa Inés',
   icons: {
     icon: '/favicon.ico'
   }
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Laboratorio Clínico Santa Inés</title>
       </head>
-      <body className={`${inter.className}`}>
+      <body className={`bg-gray-100 grid grid-rows-[auto_1fr_auto] ${inter.className}`}>
         <Header />
         {children}
         <Footer />

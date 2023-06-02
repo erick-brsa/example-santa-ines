@@ -1,11 +1,13 @@
+import Link from "next/link"
+
 export function Footer() {
 	return (
 		<footer className="bg-white">
 			<div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
 				<div className="md:flex md:justify-between">
 					<div className="w-1/3 mb-6 md:mb-0">
-						<a
-							href="#"
+						<Link
+							href="/"
 							className="flex items-center"
 						>
 							<img
@@ -13,7 +15,7 @@ export function Footer() {
 								className="w-full mr-3 object-cover"
 								alt="FlowBite Logo"
 							/>
-						</a>
+						</Link>
 					</div>
 					<div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
 						<div>
@@ -22,20 +24,20 @@ export function Footer() {
 							</h2>
 							<ul className="text-gray-600 font-medium">
 								<li className="mb-4">
-									<a
-										href="#"
+									<Link
+										href="/catalogo"
 										className="hover:underline"
 									>
 										Estudios
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
-										href="https://tailwindcss.com/"
+									<Link
+										href="/agendar-cita"
 										className="hover:underline"
 									>
 										Citas
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
