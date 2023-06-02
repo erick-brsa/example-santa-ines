@@ -1,5 +1,7 @@
 'use client'
 
+import Link from "next/link"
+
 export function Form() {
 
     function handleSignin(e) {
@@ -77,12 +79,12 @@ export function Form() {
 			</button>
 			<p className="text-sm font-light text-gray-500400">
 				¿Todavía no tienes una cuenta?{' '}
-				<a
-					href="#"
+				<Link
+					href="/registro"
 					className="font-medium text-primary-600 hover:underline500"
 				>
 					Regístrate
-				</a>
+				</Link>
 			</p>
 		</form>
 	)
