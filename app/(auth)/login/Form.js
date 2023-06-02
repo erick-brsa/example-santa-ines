@@ -1,8 +1,11 @@
 'use client'
 
-import Link from "next/link"
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export function Form() {
+
+	const router = useRouter()
 
     function handleSignin(e) {
 		e.preventDefault()
@@ -74,6 +77,7 @@ export function Form() {
 			<button
 				type="submit"
 				className="w-full bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-900 font-semibold focus:ring-4 focus:outline-none focus:ring-primary-300 transition-colors rounded-lg text-sm px-5 py-2.5 text-center"
+				onClick={() => router.push('/dashboard')}
 			>
 				Ingresar
 			</button>

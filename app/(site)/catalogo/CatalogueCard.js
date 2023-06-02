@@ -4,7 +4,7 @@ export function CatalogueCard({ study }) {
 	return (
 		<div className='bg-white shadow-[0px_2px_8px_0px_rgba(99,99,99,0.2)] rounded-xl overflow-hidden border border-gray-200 transition-shadow'>
 			<Link
-				href={`/`}
+				href={`/catalogo/${study.name.toLowerCase().replaceAll(' ', '_')}`}
 				className="grid grid-rows-[auto_1fr_auto] h-full"
 			>	
 				<div className="flex bg-blue-900 text-white">
