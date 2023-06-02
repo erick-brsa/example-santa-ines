@@ -20,7 +20,7 @@ export function Form() {
 		>
 			<div>
 				<label
-					for="email"
+					htmlFor="email"
 					className="block mb-2 text-sm font-medium text-gray-900"
 				>
 					Correo electrónico
@@ -36,7 +36,7 @@ export function Form() {
 			</div>
 			<div>
 				<label
-					for="password"
+					htmlFor="password"
 					className="block mb-2 text-sm font-medium text-gray-900"
 				>
 					Contraseña
@@ -62,7 +62,7 @@ export function Form() {
 						/>
 					</div>
 					<div className="ml-3 text-sm">
-						<label for="remember" className="text-gray-500">
+						<label htmlFor="remember" className="text-gray-500">
 							Recuérdame
 						</label>
 					</div>

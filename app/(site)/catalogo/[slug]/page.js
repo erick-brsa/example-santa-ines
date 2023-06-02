@@ -1,7 +1,7 @@
 export default function studyPage({ params }) {
 	const { slug: name } = params;
 	return (
-		<main className="py-10">
+		<main className="py-10 px-5">
 			<div className="w-full max-w-6xl mx-auto">
 				<div>
 					<h1 className="text-4xl font-bold">
